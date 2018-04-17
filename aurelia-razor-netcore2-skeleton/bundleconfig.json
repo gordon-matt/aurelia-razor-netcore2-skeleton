@@ -20,5 +20,27 @@
     },
     // Optionally generate .map file
     "sourceMap": false
+  },
+
+  {
+    "outputFileName": "wwwroot/lib/bootstrap.min.css",
+    "inputFiles": [
+      "node_modules/bootstrap/dist/css/bootstrap.min.css"
+    ]
+  },
+
+  {
+    "outputFileName": "wwwroot/lib/font-awesome.min.css",
+    "inputFiles": [
+      "node_modules/font-awesome/css/font-awesome.min.css"
+    ]
+  },
+
+  {
+    "outputFileName": "wwwroot/lib/jquery.min.js",
+    "inputFiles": [
+      "node_modules/jquery/dist/jquery.min.js"
+    ]
   }
+
 ]

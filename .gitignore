@@ -36,6 +36,7 @@ bld/
 
 aurelia-razor-netcore2-skeleton/wwwroot/lib/
 aurelia-razor-netcore2-skeleton/wwwroot/jspm_packages/
+aurelia-razor-netcore2-skeleton/package-lock.json
 
 # MSTest test Results
 [Tt]est[Rr]esult*/
