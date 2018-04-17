@@ -6,24 +6,53 @@ namespace aurelia_razor_netcore2_skeleton.Controllers
 {
     public class HomeController : Controller
     {
+        [Route("")]
+        public IActionResult Host()
+        {
+            return View();
+        }
+
+        [Route("index")]
         public IActionResult Index()
         {
-            return View();
+            return PartialView();
         }
 
-        public IActionResult About()
+        [Route("app")]
+        public IActionResult App()
         {
-            ViewData["Message"] = "Your application description page.";
-
-            return View();
+            return PartialView();
         }
 
-        public IActionResult Contact()
+        [Route("nav-bar")]
+        public IActionResult NavBar()
         {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
+            return PartialView();
         }
+
+        [Route("flickr")]
+        public IActionResult Flickr()
+        {
+            return PartialView();
+        }
+
+        [Route("test-page")]
+        public IActionResult TestPage()
+        {
+            return PartialView();
+        }
+
+        //public IActionResult About()
+        //{
+        //    ViewData["Message"] = "Your application description page.";
+        //    return PartialView();
+        //}
+
+        //public IActionResult Contact()
+        //{
+        //    ViewData["Message"] = "Your contact page.";
+        //    return PartialView();
+        //}
 
         public IActionResult Error()
         {
