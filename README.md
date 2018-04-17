@@ -1,0 +1,1 @@
+# aurelia-razor-netcore2-skeleton
