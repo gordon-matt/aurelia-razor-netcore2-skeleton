@@ -19,10 +19,10 @@ namespace aurelia_razor_netcore2_skeleton.Infrastructure
             {
                 var routes = new List<AureliaRoute>();
 
-                routes.Add(new AureliaRoute { Route = "", Name = "index", ModuleId = "./index", Nav = true, Title = "Home", JsPath = "TODO" });
-                routes.Add(new AureliaRoute { Route = "flickr", Name = "flickr", ModuleId = "./flickr", Nav = true, Title = "Flickr", JsPath = "TODO" });
-                routes.Add(new AureliaRoute { Route = "test-page", Name = "test-page", ModuleId = "./test-page", Nav = true, Title = "Test Page", JsPath = "TODO" });
-                routes.Add(new AureliaRoute { Route = "child-router", Name = "child-router", ModuleId = "./child-router", Nav = true, Title = "Child Router", JsPath = "TODO" });
+                routes.Add(new AureliaRoute { Route = "", Name = "index", ModuleId = "./aurelia-app/index", Nav = true, Title = "Home" });
+                routes.Add(new AureliaRoute { Route = "flickr", Name = "flickr", ModuleId = "./aurelia-app/flickr", Nav = true, Title = "Flickr" });
+                routes.Add(new AureliaRoute { Route = "test/test-page", Name = "test/test-page", ModuleId = "./aurelia-app/test1/test-page", Nav = true, Title = "Test Page" });
+                routes.Add(new AureliaRoute { Route = "child-router", Name = "child-router", ModuleId = "./aurelia-app/child-router", Nav = true, Title = "Child Router" });
 
                 return routes;
             }

@@ -48,12 +48,6 @@ namespace aurelia_razor_netcore2_skeleton.Controllers
             return PartialView();
         }
 
-        [Route("test-page")]
-        public IActionResult TestPage()
-        {
-            return PartialView();
-        }
-
         [Route("get-spa-routes")]
         public JsonResult GetSpaRoutes()
         {

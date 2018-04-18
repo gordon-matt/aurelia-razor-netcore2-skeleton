@@ -14,7 +14,6 @@ export class App {
             dataType: "json",
             async: false
         }).done(function (json) {
-            console.log(' === Routes: ' + JSON.stringify(json));
             $(json).each(function (index, item) {
                 self.router.addRoute({ route: item.route, name: item.name, moduleId: item.moduleId, title: item.title, nav: item.nav ? true : false });
             });

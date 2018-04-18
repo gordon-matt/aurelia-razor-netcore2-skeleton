@@ -10,10 +10,19 @@ export function configure(aurelia) {
         .standardConfiguration()
         .developmentLogging();
 
-    ViewLocator.prototype.convertOriginToViewUrl = function(origin) {
-        var split = origin.moduleId.split("/");
-        var name = split[split.length-1].replace(".js", "");
-        return name;
+    ViewLocator.prototype.convertOriginToViewUrl = function (origin) {
+        var viewUrl = null;
+        var idx = origin.moduleId.indexOf('aurelia-app');
+
+        if (idx != -1) {
+            viewUrl = origin.moduleId.substring(idx + 11).replace(".js", "");
+        }
+        else {
+            var split = origin.moduleId.split("/");
+            viewUrl = split[split.length - 1].replace(".js", "");
+        }
+        console.log('View URL: ' + viewUrl);
+        return viewUrl;
     }
  
     //aurelia.start().then(a => a.setRoot());
