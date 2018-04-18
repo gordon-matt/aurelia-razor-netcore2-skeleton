@@ -1,4 +1,8 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using aurelia_razor_netcore2_skeleton.Infrastructure;
 using aurelia_razor_netcore2_skeleton.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -6,6 +10,14 @@ namespace aurelia_razor_netcore2_skeleton.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly Lazy<IEnumerable<IAureliaRouteProvider>> routeProviders;
+
+        public HomeController(
+            Lazy<IEnumerable<IAureliaRouteProvider>> routeProviders)
+        {
+            this.routeProviders = routeProviders;
+        }
+
         [Route("")]
         public IActionResult Host()
         {
@@ -40,6 +52,16 @@ namespace aurelia_razor_netcore2_skeleton.Controllers
         public IActionResult TestPage()
         {
             return PartialView();
+        }
+
+        [Route("get-spa-routes")]
+        public JsonResult GetSpaRoutes()
+        {
+            var routes = routeProviders.Value
+                .Where(x => x.Area == "Admin")
+                .SelectMany(x => x.Routes);
+
+            return Json(routes);
         }
 
         //public IActionResult About()

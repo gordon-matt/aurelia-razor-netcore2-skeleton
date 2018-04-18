@@ -4,12 +4,23 @@
 export class App {
     configureRouter(config, router) {
         config.title = 'Aurelia';
-        config.map([
-            { route: [''], name: 'index', moduleId: './index', nav: true, title: 'Home' },
-            { route: 'flickr', name: 'flickr', moduleId: './flickr', nav: true, title:'Flickr' },
-            { route: 'test-page', name: 'test-page', moduleId: './test-page', nav: true, title:'Test Page' },
-            { route: 'child-router', name: 'child-router', moduleId: './child-router', nav: true, title:'Child Router' }
-        ]);
-        this.router = router;
+
+        self = this;
+        self.router = router;
+
+        $.ajax({
+            url: "/get-spa-routes",
+            type: "GET",
+            dataType: "json",
+            async: false
+        }).done(function (json) {
+            console.log(' === Routes: ' + JSON.stringify(json));
+            $(json).each(function (index, item) {
+                self.router.addRoute({ route: item.route, name: item.name, moduleId: item.moduleId, title: item.title, nav: item.nav ? true : false });
+            });
+            self.router.refreshNavigation();
+        }).fail(function (jqXHR, textStatus, errorThrown) {
+            console.log(textStatus + ': ' + errorThrown);
+        });
     }
 }
