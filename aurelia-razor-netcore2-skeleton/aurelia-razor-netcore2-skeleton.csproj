@@ -6,6 +6,14 @@
     <RootNamespace>aurelia_razor_netcore2_skeleton</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Remove="Views\Tutorials\ContactManager.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Views\Tutorials\ContactManager.cshtml" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <PackageReference Include="Autofac" Version="4.7.1" />
