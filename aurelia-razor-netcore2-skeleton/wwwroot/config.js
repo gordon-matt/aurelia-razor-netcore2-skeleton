@@ -38,7 +38,16 @@ System.config({
     "aurelia-templating-router": "npm:aurelia-templating-router@1.3.1",
     "babel": "npm:babel-core@5.8.38",
     "babel-runtime": "npm:babel-runtime@5.8.38",
+    "bootstrap": "github:twbs/bootstrap@3.3.7",
     "core-js": "npm:core-js@1.2.7",
+    "font-awesome": "npm:font-awesome@4.7.0",
+    "jquery": "npm:jquery@3.3.1",
+    "jquery-validation": "github:jquery-validation/jquery-validation@1.17.0",
+    "jquery-validation-unobtrusive": "github:aspnet/jquery-validation-unobtrusive@3.2.9",
+    "nprogress": "github:rstacruz/nprogress@0.2.0",
+    "github:aspnet/jquery-validation-unobtrusive@3.2.9": {
+      "jquery-validation": "github:jquery-validation/jquery-validation@1.17.0"
+    },
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.4.1"
     },
@@ -56,6 +65,12 @@ System.config({
     },
     "github:jspm/nodelibs-vm@0.1.0": {
       "vm-browserify": "npm:vm-browserify@0.0.4"
+    },
+    "github:rstacruz/nprogress@0.2.0": {
+      "css": "github:systemjs/plugin-css@0.1.37"
+    },
+    "github:twbs/bootstrap@3.3.7": {
+      "jquery": "npm:jquery@3.3.1"
     },
     "npm:assert@1.4.1": {
       "assert": "github:jspm/nodelibs-assert@0.1.0",
@@ -194,6 +209,9 @@ System.config({
       "path": "github:jspm/nodelibs-path@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.2",
       "systemjs-json": "github:systemjs/plugin-json@0.1.2"
+    },
+    "npm:font-awesome@4.7.0": {
+      "css": "github:systemjs/plugin-css@0.1.37"
     },
     "npm:inherits@2.0.1": {
       "util": "github:jspm/nodelibs-util@0.1.0"

@@ -1,7 +1,5 @@
-﻿//import 'bootstrap';
-//import 'bootstrap/css/bootstrap.css!';
-
-import { PLATFORM } from 'aurelia-pal';
+﻿import { PLATFORM } from 'aurelia-pal';
+import $ from 'jquery';
 
 export class App {
     configureRouter(config, router) {
