@@ -10,11 +10,5 @@ namespace aurelia_razor_netcore2_skeleton.Controllers
         {
             return PartialView();
         }
-
-        [Route("contact-manager")]
-        public IActionResult ContactManager()
-        {
-            return PartialView();
-        }
     }
 }

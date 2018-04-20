@@ -1,7 +1,10 @@
 ﻿import {LogManager} from "aurelia-framework";
 import {ConsoleAppender} from "aurelia-logging-console";
-import {ViewLocator} from "aurelia-framework";
- 
+import { ViewLocator } from "aurelia-framework";
+
+//import 'lib/bootstrap.min.css!';
+//import 'lib/font-awesome.min.css!';
+
 LogManager.addAppender(new ConsoleAppender());
 LogManager.setLevel(LogManager.logLevel.debug);
  
@@ -11,6 +14,7 @@ export function configure(aurelia) {
         .developmentLogging();
 
     ViewLocator.prototype.convertOriginToViewUrl = function (origin) {
+        //console.log("origin: " + JSON.stringify(origin));
         var viewUrl = null;
         var idx = origin.moduleId.indexOf('aurelia-app');
 

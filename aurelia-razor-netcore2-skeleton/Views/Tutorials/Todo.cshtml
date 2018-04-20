@@ -1,18 +1,37 @@
 ﻿<template>
     <h1>${heading}</h1>
 
-    <form submit.trigger="addItem()">
-        <div class="form-group">
-            <input type="text" class="form-control" value.bind="todoDescription" />
-            <button type="submit" class="btn btn-primary">Add</button>
+    <div class="row">
+        <div class="col-md-6">
+            <form submit.trigger="addItem()">
+                <div class="form-group">
+                    <input type="text" class="form-control" value.bind="todoDescription" />
+                    <button type="submit" class="btn btn-primary">Add</button>
+                </div>
+            </form>
         </div>
-    </form>
+    </div>
 
-    <ul>
-        <li repeat.for="item of items">
-            <input type="checkbox" checked.bind="item.done" />
-            <span css="text-decoration: ${item.done ? 'line-through' : 'none'}">${item.description}</span>
-            <button type="button" class="btn btn-danger" click.trigger="removeItem(item)">Remove</button>
-        </li>
-    </ul>
+    <div class="row">
+        <div class="col-md-6">
+            <table class="table">
+                <tbody>
+                    <tr repeat.for="item of items">
+                        <td>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" checked.bind="item.done" />
+                                    <span css="text-decoration: ${item.done ? 'line-through' : 'none'}">${item.description}</span>
+                                </label>
+                            </div>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-danger btn-sm" click.trigger="removeItem(item)">Remove</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
 </template>
