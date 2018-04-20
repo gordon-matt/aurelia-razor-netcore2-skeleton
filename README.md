@@ -7,7 +7,7 @@
 2. Install JSPM globally: `npm install -g jspm`
 3. Clone/download this project
 4. Initialize JSPM: `jspm init`
-    - Do this from the root directory of the project. The steps should look something like this:
+    > Do this from the root directory of the project. The steps should look something like this:
     ```
     $ jspm init
 
@@ -83,6 +83,6 @@
     ok   Installed babel-runtime as npm:babel-runtime@^5.8.24 (5.8.38)
     ok   Loader files downloaded successfully
     ```
-    - Pay special attention to set the **baseURL** to **./wwwroot**
+    > Pay special attention to set the **baseURL** to **./wwwroot**
 5. Install Visual Studio Extension: [Package Installer](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.PackageInstaller) (Optional, but highly recommended)
 6. That should be about it. Simply build and run the project.
