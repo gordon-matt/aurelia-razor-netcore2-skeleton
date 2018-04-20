@@ -2,7 +2,7 @@
 import { EventAggregator } from 'aurelia-event-aggregator';
 import { WebAPI } from '/aurelia-app/contact-manager/web-api';
 import { ContactUpdated, ContactViewed } from '/aurelia-app/contact-manager/messages';
-import { areEqual } from '/utility';
+import { areEqual } from '/aurelia-app/utility';
 
 @inject(WebAPI, EventAggregator)
 export class ContactDetails {

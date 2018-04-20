@@ -7,7 +7,7 @@ export class Todo {
 
     addItem() {
         // Logging for debug purposes
-        console.log('todoDescription: ' + this.todoDescription); // Why is this always an empty string? It's not binding for some reason...
+        //console.log('todoDescription: ' + this.todoDescription); // Why is this always an empty string? It's not binding for some reason...
 
         if (this.todoDescription) {
             this.items.push(new TodoItem(this.todoDescription));
