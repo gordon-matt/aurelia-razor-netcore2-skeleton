@@ -1,0 +1,20 @@
+﻿<template>
+    <require from='/aurelia-app/nav-bar'></require>
+
+    <require from="/jspm_packages/github/twbs/bootstrap@3.3.7/css/bootstrap.min.css"></require>
+    <require from="/jspm_packages/npm/font-awesome@4.7.0/css/font-awesome.min.css"></require>
+    <require from="/css/site.min.css"></require>
+
+    <nav-bar router.bind="router"></nav-bar>
+
+    <div class="container body-content">
+        <div class="page-host">
+            <router-view></router-view>
+        </div>
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Some Copyright Here</p>
+        </footer>
+    </div>
+
+</template>

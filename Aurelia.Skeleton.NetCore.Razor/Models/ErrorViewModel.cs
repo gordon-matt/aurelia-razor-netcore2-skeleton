@@ -1,0 +1,9 @@
+namespace Aurelia.Skeleton.NetCore.Razor.Models
+{
+    public class ErrorViewModel
+    {
+        public string RequestId { get; set; }
+
+        public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
+    }
+}
