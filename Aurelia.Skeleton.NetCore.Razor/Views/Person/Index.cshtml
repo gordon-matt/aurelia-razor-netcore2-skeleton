@@ -26,17 +26,25 @@
             <ak-grid id="grid"
                      k-data-source.bind="datasource"
                      k-widget.bind="grid"
+                     k-filterable.bind="true"
+                     k-sortable.bind="{ allowUnsort: false }"
                      k-pageable.bind="{ refresh: true, pageSizes: true, buttonCount: 10 }"
-                     k-sortable.bind="true">
-                <ak-col k-title="Family Name" k-field="FamilyName"></ak-col>
-                <ak-col k-title="Given Name/s" k-field="GivenNames"></ak-col>
-                <ak-col k-title="Date of Birth" k-field="DateOfBirth"></ak-col>
-                <ak-col k-title=" " k-field="Id">
+                     k-scrollable.bind="false">
+                <ak-col k-field="FamilyName" k-title="Family Name"></ak-col>
+                <ak-col k-field="GivenNames" k-title="Given Name/s"></ak-col>
+                <ak-col k-field="DateOfBirth" k-title="Date of Birth" k-filterable="false" k-width="200" k-type="date" k-format="{0:G}"></ak-col>
+                <ak-col k-field="Id" k-title=" " k-filterable="false" k-width="120">
                     <ak-template>
                         <div class="text-center">
                             <div class="btn-group">
-                                <a click.delegate="edit($this.Id)" class="btn btn-default btn-xs">Edit</a>
-                                <a click.delegate="remove($this.Id)" class="btn btn-danger btn-xs">Delete</a>
+                                <a click.delegate="edit($this.Id)" class="btn btn-default btn-xs">
+                                    <i class="fa fa-edit"></i>
+                                    Edit
+                                </a>
+                                <a click.delegate="remove($this.Id)" class="btn btn-danger btn-xs">
+                                    <i class="fa fa-trash"></i>
+                                    Delete
+                                </a>
                             </div>
                         </div>
                     </ak-template>

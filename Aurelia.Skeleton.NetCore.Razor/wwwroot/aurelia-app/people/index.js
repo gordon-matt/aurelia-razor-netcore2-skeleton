@@ -1,27 +1,54 @@
 ﻿import $ from 'jquery';
+import { validation } from 'jquery-validation';
 import { HttpClient } from 'aurelia-http-client';
 import { SectionSwitcher } from '/aurelia-app/shared/section-switching';
 
 export class ViewModel {
     odataBaseUrl = "/odata/PersonApi";
-    id = 0;
-    familyName = null;
-    givenNames = null;
-    dateOfBirth = null;
 
     constructor(sectionSwitcher) {
-        this.sectionSwitcher = new SectionSwitcher('grid-section');
-
         this.datasource = {
             type: 'odata-v4',
             transport: {
                 read: this.odataBaseUrl
             },
-            pageSize: 10
+            schema: {
+                model: {
+                    fields: {
+                        FamilyName: { type: "string" },
+                        GivenNames: { type: "string" },
+                        DateOfBirth: { type: "date" }
+                    }
+                }
+            },
+            pageSize: 10,
+            serverPaging: true,
+            serverFiltering: true,
+            serverSorting: true,
+            sort: [
+                { field: "FamilyName", dir: "asc" },
+                { field: "GivenNames", dir: "asc" }
+            ]
         };
         
         this.http = new HttpClient();
     }
+
+    // Aurelia Component Lifecycle Methods
+
+    attached() {
+        this.sectionSwitcher = new SectionSwitcher('grid-section');
+
+        this.validator = $("#form-section-form").validate({
+            rules: {
+                FamilyName: { required: true, maxlength: 128 },
+                GivenNames: { required: true, maxlength: 128 },
+                DateOfBirth: { required: true, date: true }
+            }
+        });
+    }
+
+    // END: Aurelia Component Lifecycle Methods
 
     create() {
         this.id = 0;
@@ -29,6 +56,7 @@ export class ViewModel {
         this.givenNames = null;
         this.dateOfBirth = null;
 
+        this.validator.resetForm();
         $("#form-section-legend").html("Create");
         this.sectionSwitcher.swap('form-section');
     }
@@ -42,6 +70,7 @@ export class ViewModel {
         this.givenNames = entity.GivenNames;
         this.dateOfBirth = entity.DateOfBirth;
 
+        this.validator.resetForm();
         $("#form-section-legend").html("Edit");
         this.sectionSwitcher.swap('form-section');
     }
@@ -56,9 +85,13 @@ export class ViewModel {
     }
 
     async save() {
-        var isNew = (this.id == 0);
+        if (!$("#form-section-form").valid()) {
+            return false;
+        }
+
+        let isNew = (this.id == 0);
         
-        var record = {
+        let record = {
             Id: this.id,
             FamilyName: this.familyName,
             GivenNames: this.givenNames,
