@@ -78,7 +78,7 @@ namespace Framework.Controllers.OData
         }
 
         // PUT: odata/<Entity>(5)
-        public virtual async Task<IActionResult> Put([FromODataUri] TKey key, TEntity entity)
+        public virtual async Task<IActionResult> Put([FromODataUri] TKey key, [FromBody] TEntity entity)
         {
             if (!CanModifyEntity(entity))
             {
@@ -116,7 +116,7 @@ namespace Framework.Controllers.OData
         }
 
         // POST: odata/<Entity>
-        public virtual async Task<IActionResult> Post(TEntity entity)
+        public virtual async Task<IActionResult> Post([FromBody] TEntity entity)
         {
             if (!CanModifyEntity(entity))
             {

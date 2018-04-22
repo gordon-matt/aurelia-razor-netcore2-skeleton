@@ -1,7 +1,6 @@
-# Aurelia Skeleton Navigation for .NET Core 2.0
-### using Razor views and dynamic routes
+# Aurelia Skeleton Navigation for .NET Core 2.0 (using Razor views and dynamic routes)
 
-**Instructions:**
+## Instructions
 
 1. Install [NodeJS](https://nodejs.org/en/download/)
 2. Install JSPM globally: `npm install -g jspm`
@@ -11,3 +10,7 @@
 5. That should be about it. Simply build and run the project.
 
 > **OPTIONAL:** When working with JSPM, I recommend using the following Visual Studio extension: [Package Installer](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.PackageInstaller)
+
+## License
+
+This project is licensed under the [MIT license](LICENSE.txt).
