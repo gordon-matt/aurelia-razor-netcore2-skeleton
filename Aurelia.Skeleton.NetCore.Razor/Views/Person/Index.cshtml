@@ -32,20 +32,16 @@
                      k-scrollable.bind="false">
                 <ak-col k-field="FamilyName" k-title="Family Name"></ak-col>
                 <ak-col k-field="GivenNames" k-title="Given Name/s"></ak-col>
-                <ak-col k-field="DateOfBirth" k-title="Date of Birth" k-filterable="false" k-width="200" k-type="date" k-format="{0:G}"></ak-col>
-                <ak-col k-field="Id" k-title=" " k-filterable="false" k-width="120">
+                <ak-col k-field="DateOfBirth" k-title="Date of Birth" k-type="date" k-filterable.bind="false" k-width.bind="200" k-format="{0:G}"></ak-col>
+                <ak-col k-field="Id" k-title=" " k-filterable.bind="false" k-width.bind="150" k-attributes.bind="{ class: 'text-center' }">
                     <ak-template>
-                        <div class="text-center">
-                            <div class="btn-group">
-                                <a click.delegate="edit($this.Id)" class="btn btn-default btn-xs">
-                                    <i class="fa fa-edit"></i>
-                                    Edit
-                                </a>
-                                <a click.delegate="remove($this.Id)" class="btn btn-danger btn-xs">
-                                    <i class="fa fa-trash"></i>
-                                    Delete
-                                </a>
-                            </div>
+                        <div class="btn-group">
+                            <a click.delegate="edit($this.Id)" class="btn btn-default btn-xs">
+                                <i class="fa fa-edit"></i> Edit
+                            </a>
+                            <a click.delegate="remove($this.Id)" class="btn btn-danger btn-xs">
+                                <i class="fa fa-trash"></i> Delete
+                            </a>
                         </div>
                     </ak-template>
                 </ak-col>
