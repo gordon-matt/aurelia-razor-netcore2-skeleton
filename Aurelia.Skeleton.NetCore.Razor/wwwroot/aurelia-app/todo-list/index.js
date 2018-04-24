@@ -1,6 +1,6 @@
 ﻿import { TodoItem } from './todo-item';
 
-export class Todo {
+export class TodoList {
     heading = "To do List";
     todoDescription = '';
     items = [];

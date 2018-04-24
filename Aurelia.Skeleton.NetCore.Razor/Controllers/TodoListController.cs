@@ -2,11 +2,11 @@
 
 namespace Aurelia.Skeleton.NetCore.Razor.Controllers
 {
-    [Route("tutorials")]
-    public class TutorialsController : Controller
+    [Route("todo-list")]
+    public class TodoListController : Controller
     {
-        [Route("todo")]
-        public IActionResult Todo()
+        [Route("")]
+        public IActionResult Index()
         {
             return PartialView();
         }

@@ -57,6 +57,16 @@ namespace Aurelia.Skeleton.NetCore.Razor.Controllers
             return Json(routes);
         }
 
+        [Route("get-moduleId-to-viewUrl-mappings")]
+        public JsonResult GetModuleIdToViewUrlMappings()
+        {
+            var mappings = routeProviders
+                .Where(x => x.Area == "Admin")
+                .SelectMany(x => x.ModuleIdToViewUrlMappings);
+
+            return Json(mappings);
+        }
+
         //public IActionResult About()
         //{
         //    ViewData["Message"] = "Your application description page.";

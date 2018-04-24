@@ -16,7 +16,7 @@ namespace Aurelia.Skeleton.NetCore.Razor.Controllers
             this.personService = personService;
         }
 
-        [Route("index")]
+        [Route("")]
         public IActionResult Index()
         {
             if (personService.Count() == 0)

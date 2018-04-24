@@ -5,7 +5,7 @@ namespace Aurelia.Skeleton.NetCore.Razor.Controllers
     [Route("contact-manager")]
     public class ContactManagerController : Controller
     {
-        [Route("index")]
+        [Route("")]
         public IActionResult Index()
         {
             return PartialView();
