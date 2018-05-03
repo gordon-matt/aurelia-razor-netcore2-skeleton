@@ -8,11 +8,6 @@
     <require from="aurelia-kendoui-bridge/common/template"></require>
     <require from="aurelia-kendoui-bridge/datepicker/datepicker"></require>
 
-    <require from="/kendo-sdk/styles/kendo.common.min.css"></require>
-    @*<require from="/kendo-sdk/styles/kendo.default.min.css"></require>*@
-    <require from="/kendo-sdk/styles/kendo.bootstrap.min.css"></require>
-    <require from="humane-js/themes/libnotify.css"></require>
-
     <div id="grid-section" class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <button click.delegate="create()" class="btn btn-primary">
@@ -34,7 +29,7 @@
                 <ak-col k-field="FamilyName" k-title="Family Name"></ak-col>
                 <ak-col k-field="GivenNames" k-title="Given Name/s"></ak-col>
                 <ak-col k-field="DateOfBirth" k-title="Date of Birth" k-type="date" k-filterable.bind="false" k-width.bind="200" k-format="{0:yyyy-MM-dd}"></ak-col>
-                <ak-col k-field="Id" k-title=" " k-filterable.bind="false" k-width.bind="150" k-attributes.bind="{ class: 'text-center' }">
+                <ak-col k-field="Id" k-title="&nbsp;" k-filterable.bind="false" k-width.bind="150" k-attributes.bind="{ class: 'text-center' }">
                     <ak-template>
                         <div class="btn-group">
                             <a click.delegate="edit($this.Id)" class="btn btn-default btn-xs">
