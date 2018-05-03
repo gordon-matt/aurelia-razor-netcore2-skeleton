@@ -10,6 +10,16 @@ export function configure(aurelia) {
         .standardConfiguration()
         .developmentLogging()
         .plugin('aurelia-kendoui-bridge', (kendo) => kendo.detect().notifyBindingBehavior())
+        .plugin('aurelia-notification', config => {
+            config.configure({
+                translate: false,  // 'true' needs aurelia-i18n to be configured
+                notifications: {
+                    'success': 'humane-libnotify-success',
+                    'error': 'humane-libnotify-error',
+                    'info': 'humane-libnotify-info'
+                }
+            });
+        })
         .globalResources([
             PLATFORM.moduleName('/aurelia-app/shared/loading-indicator')
         ]);
