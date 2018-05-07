@@ -1,0 +1,69 @@
+﻿<div id="settings-content">
+    <div role="tabpanel">
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active">
+                <a href="#General" aria-controls="General" role="tab" data-toggle="tab">General</a>
+            </li>
+            <li role="presentation">
+                <a href="#Themes" aria-controls="Themes" role="tab" data-toggle="tab">Themes</a>
+            </li>
+            <li role="presentation">
+                <a href="#Localization" aria-controls="Localization" role="tab" data-toggle="tab">Localization</a>
+            </li>
+            <li role="presentation">
+                <a href="#SEO" aria-controls="SEO" role="tab" data-toggle="tab">SEO</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="General">
+                <div class="form-group">
+                    <label for="SiteName">Site Name</label>
+                    <input type="text" id="SiteName" name="SiteName" class="form-control" value.bind="siteName" />
+                </div>
+                <div class="form-group">
+                    <label for="DefaultFrontendLayoutPath">Default Frontend Layout Path</label>
+                    <input type="text" id="DefaultFrontendLayoutPath" name="DefaultFrontendLayoutPath" class="form-control" value.bind="defaultFrontendLayoutPath" />
+                </div>
+                <div class="form-group">
+                    <label for="AdminLayoutPath">Admin Layout Path</label>
+                    <input type="text" id="AdminLayoutPath" name="AdminLayoutPath" class="form-control" value.bind="adminLayoutPath" />
+                </div>
+                <div class="form-group">
+                    <label for="DefaultGridPageSize">Default Grid Page Size</label>
+                    <input type="text" id="DefaultGridPageSize" name="DefaultGridPageSize" class="form-control" value.bind="defaultGridPageSize" />
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="Themes">
+                <div class="form-group">
+                    <label for="DefaultTheme">Default Theme</label>
+                    <input type="text" id="DefaultTheme" name="DefaultTheme" class="form-control" value.bind="defaultTheme" />
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" id="AllowUserToSelectTheme" name="AllowUserToSelectTheme" checked.bind="allowUserToSelectTheme" /> Allow User To Select Theme
+                    </label>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="Localization">
+                <div class="form-group">
+                    <label for="DefaultLanguage">Default Language</label>
+                    <input type="text" id="DefaultLanguage" name="DefaultLanguage" class="form-control" value.bind="defaultLanguage" />
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="SEO">
+                <div class="form-group">
+                    <label for="DefaultMetaKeywords">Default Meta Keywords</label>
+                    <input type="text" id="DefaultMetaKeywords" name="DefaultMetaKeywords" class="form-control" value.bind="defaultMetaKeywords" />
+                </div>
+                <div class="form-group">
+                    <label for="DefaultMetaDescription">Default Meta Description</label>
+                    <input type="text" id="DefaultMetaDescription" name="DefaultMetaDescription" class="form-control" value.bind="defaultMetaDescription" />
+                </div>
+                <div class="form-group">
+                    <label for="HomePageTitle">Home Page Title</label>
+                    <input type="text" id="HomePageTitle" name="HomePageTitle" class="form-control" value.bind="homePageTitle" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

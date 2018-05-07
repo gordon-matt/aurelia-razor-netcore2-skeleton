@@ -1,0 +1,16 @@
+﻿<div id="settings-content">
+    <p>Generated Passwords</p>
+    <div class="form-group">
+        <label for="GeneratedPasswordLength">Generated Password: Length</label>
+        <input type="number" id="GeneratedPasswordLength" name="GeneratedPasswordLength" class="form-control" value.bind="generatedPasswordLength" />
+    </div>
+    <div class="form-group">
+        <label for="GeneratedPasswordNumberOfNonAlphanumericChars">Generated Password: Number of Non-Alphanumeric Chars</label>
+        <input type="number" id="GeneratedPasswordNumberOfNonAlphanumericChars" name="GeneratedPasswordNumberOfNonAlphanumericChars" class="form-control" value.bind="generatedPasswordNumberOfNonAlphanumericChars" />
+    </div>
+    <div class="checkbox">
+        <label>
+            <input type="checkbox" id="DisallowUnconfirmedUserLogin" name="DisallowUnconfirmedUserLogin" checked.bind="disallowUnconfirmedUserLogin" /> Disallow Unconfirmed User Login
+        </label>
+    </div>
+</div>

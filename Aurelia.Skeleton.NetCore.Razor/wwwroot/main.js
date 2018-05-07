@@ -9,8 +9,8 @@ export function configure(aurelia) {
     aurelia.use
         .standardConfiguration()
         .developmentLogging()
-        .plugin('aurelia-kendoui-bridge', (kendo) => kendo.detect().notifyBindingBehavior())
-        .plugin('aurelia-notification', config => {
+        .plugin(PLATFORM.moduleName('aurelia-kendoui-bridge'))
+        .plugin(PLATFORM.moduleName('aurelia-notification'), config => {
             config.configure({
                 translate: false,  // 'true' needs aurelia-i18n to be configured
                 notifications: {
@@ -20,6 +20,7 @@ export function configure(aurelia) {
                 }
             });
         })
+        .plugin(PLATFORM.moduleName("aurelia-dynamic-html"))
         .globalResources([
             PLATFORM.moduleName('/aurelia-app/shared/loading-indicator')
         ]);

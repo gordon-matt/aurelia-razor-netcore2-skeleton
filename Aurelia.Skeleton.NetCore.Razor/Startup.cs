@@ -8,6 +8,7 @@ using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using Framework.Data;
 using Framework.OData;
+using Framework.Rendering;
 using Microsoft.AspNet.OData.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -100,6 +101,8 @@ namespace Aurelia.Skeleton.NetCore.Razor
             builder.RegisterType<ODataRegistrar>().As<IODataRegistrar>().SingleInstance();
 
             builder.RegisterType<PersonService>().As<IPersonService>().InstancePerDependency();
+
+            builder.RegisterType<RazorViewRenderService>().As<IRazorViewRenderService>().SingleInstance();
 
             var container = builder.Build();
             return new AutofacServiceProvider(container);

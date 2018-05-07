@@ -1,0 +1,41 @@
+﻿@using Aurelia.Skeleton.NetCore.Razor.Models
+
+<template>
+    <require from="aurelia-dynamic-html/aurelia-dynamic-html"></require>
+
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Panel title</h3>
+            </div>
+            <div class="panel-body">
+                <form>
+                    <div class="form-group">
+                        <label for="SettingsType">Settings Type</label>
+                        @Html.DropDownList(
+                            "SettingsType",
+                            Html.GetEnumSelectList<SettingsType>(),
+                            new Dictionary<string, object>
+                            {
+                                { "class", "form-control" },
+                                { "value.bind", "settingsType" }
+                            })
+                    </div>
+                    <div class="form-group">
+                        <button type="button" click.delegate="getSettingsUI()" class="btn btn-primary">Get Settings</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Dynamic HTML</h3>
+            </div>
+            <div class="panel-body">
+                <dynamic-html html.bind="dynamicHtml" context.bind="dynamicModel"></dynamic-html>
+            </div>
+        </div>
+    </div>
+</template>

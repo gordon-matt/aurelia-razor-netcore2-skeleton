@@ -67,18 +67,6 @@ namespace Aurelia.Skeleton.NetCore.Razor.Controllers
             return Json(mappings);
         }
 
-        //public IActionResult About()
-        //{
-        //    ViewData["Message"] = "Your application description page.";
-        //    return PartialView();
-        //}
-
-        //public IActionResult Contact()
-        //{
-        //    ViewData["Message"] = "Your contact page.";
-        //    return PartialView();
-        //}
-
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });

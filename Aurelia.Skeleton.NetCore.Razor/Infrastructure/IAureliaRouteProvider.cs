@@ -22,13 +22,64 @@ namespace Aurelia.Skeleton.NetCore.Razor.Infrastructure
             {
                 var routes = new List<AureliaRoute>();
 
-                routes.Add(new AureliaRoute { Route = "", Name = "index", ModuleId = "/aurelia-app/index", Nav = true, Title = "Home" });
-                routes.Add(new AureliaRoute { Route = "flickr", Name = "flickr", ModuleId = "/aurelia-app/flickr", Nav = true, Title = "Flickr" });
-                routes.Add(new AureliaRoute { Route = "todo-list/index", Name = "todo-list/index", ModuleId = "/aurelia-app/todo-list/index", Nav = true, Title = "Todo List" });
-                routes.Add(new AureliaRoute { Route = "contact-manager/index", Name = "contact-manager/index", ModuleId = "/aurelia-app/contact-manager/index", Nav = true, Title = "Contact Manager" });
-                routes.Add(new AureliaRoute { Route = "people", Name = "people/index", ModuleId = "/aurelia-app/people/index", Nav = true, Title = "People" });
-                //routes.Add(new AureliaRoute { Route = "test/test-page", Name = "test/test-page", ModuleId = "./aurelia-app/test1/test-page", Nav = true, Title = "Test Page" });
-                //routes.Add(new AureliaRoute { Route = "child-router", Name = "child-router", ModuleId = "./aurelia-app/child-router", Nav = true, Title = "Child Router" });
+                // HomeController
+                routes.Add(new AureliaRoute
+                {
+                    ModuleId = "/aurelia-app/index",
+                    Route = "",
+                    Name = "index",
+                    Title = "Home",
+                    Nav = true
+                });
+
+                routes.Add(new AureliaRoute
+                {
+                    ModuleId = "/aurelia-app/flickr",
+                    Route = "flickr",
+                    Name = "flickr",
+                    Title = "Flickr",
+                    Nav = true
+                });
+
+                // ContactManagerController
+                routes.Add(new AureliaRoute
+                {
+                    ModuleId = "/aurelia-app/contact-manager/index",
+                    Route = "contact-manager/index",
+                    Name = "contact-manager/index",
+                    Title = "Contact Manager",
+                    Nav = true
+                });
+
+                // TodoListController
+                routes.Add(new AureliaRoute
+                {
+                    ModuleId = "/aurelia-app/todo-list/index",
+                    Route = "todo-list/index",
+                    Name = "todo-list/index",
+                    Title = "Todo List",
+                    Nav = true
+                });
+
+                // PersonController
+                routes.Add(new AureliaRoute
+                {
+                    ModuleId = "/aurelia-app/people/index",
+                    Route = "people",
+                    Name = "people/index",
+                    Title = "People",
+                    Nav = true
+                });
+
+                // DynamicHtmlTestController
+                routes.Add(new AureliaRoute
+                {
+                    ModuleId = "/aurelia-app/dynamic-html-test/index",
+                    Route = "dynamic-html-test",
+                    Name = "dynamic-html-test/index",
+                    Title = "Dynamic HTML Test",
+                    Nav = true
+                });
 
                 return routes;
             }
@@ -52,7 +103,10 @@ namespace Aurelia.Skeleton.NetCore.Razor.Infrastructure
             { "aurelia-app/people/index", "people" },
 
             // TodoListController
-            { "aurelia-app/todo-list/index", "todo-list" }
+            { "aurelia-app/todo-list/index", "todo-list" },
+
+            // DynamicHtmlTestController
+            { "aurelia-app/dynamic-html-test/index", "dynamic-html-test" }
         };
     }
 }
