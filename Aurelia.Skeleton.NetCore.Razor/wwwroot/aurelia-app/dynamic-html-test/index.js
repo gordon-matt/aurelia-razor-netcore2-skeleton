@@ -1,5 +1,6 @@
 ﻿import 'jquery';
 import 'jquery-validation';
+import 'bootstrap';
 import { HttpClient } from 'aurelia-http-client';
 
 export class ViewModel {
@@ -19,5 +20,10 @@ export class ViewModel {
             this.dynamicHtml = content.view;
             this.dynamicModel = content.model;
         }
+    }
+
+    handleCompiled($event) {
+        const el = $event.detail.el;
+        $(el.querySelectorAll('[data-toggle="tab"]')).tab();
     }
 }

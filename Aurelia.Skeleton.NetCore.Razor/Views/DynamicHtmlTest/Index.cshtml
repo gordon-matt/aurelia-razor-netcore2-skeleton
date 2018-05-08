@@ -1,7 +1,7 @@
 ﻿@using Aurelia.Skeleton.NetCore.Razor.Models
 
 <template>
-    <require from="aurelia-dynamic-html/aurelia-dynamic-html"></require>
+    @*<require from="aurelia-dynamic-html/aurelia-dynamic-html"></require>*@
 
     <div class="row">
         <div class="panel panel-default">
@@ -34,7 +34,7 @@
                 <h3 class="panel-title">Dynamic HTML</h3>
             </div>
             <div class="panel-body">
-                <dynamic-html html.bind="dynamicHtml" context.bind="dynamicModel"></dynamic-html>
+                <dynamic-html html.bind="dynamicHtml" context.bind="dynamicModel" compiled.delegate="handleCompiled($event)"></dynamic-html>
             </div>
         </div>
     </div>
