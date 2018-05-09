@@ -1,16 +1,13 @@
 ﻿import 'jquery';
 import 'jquery-validation';
-import { inject } from 'aurelia-framework';
-import { Notification } from 'aurelia-notification';
+import 'bootstrap-notify';
 import { HttpClient } from 'aurelia-http-client';
 import { SectionSwitcher } from '/aurelia-app/shared/section-switching';
 
-@inject(Notification)
 export class ViewModel {
     apiUrl = "/odata/PersonApi";
 
-    constructor(notification) {
-        this.notification = notification;
+    constructor() {
 
         this.datasource = {
             type: 'odata-v4',
@@ -87,7 +84,7 @@ export class ViewModel {
             this.grid.dataSource.read();
             this.grid.refresh();
 
-            this.notification.success('Deleted!');
+            $.notify({ message: 'Deleted!', icon: 'fa fa-check' }, { type: 'success' });
         }
     }
 
@@ -115,7 +112,7 @@ export class ViewModel {
         this.grid.dataSource.read();
         this.grid.refresh();
 
-        this.notification.success('Saved!');
+        $.notify({ message: 'Saved!', icon: 'fa fa-check' }, { type: 'success' });
         this.sectionSwitcher.swap('grid-section');
     }
 
