@@ -38,11 +38,12 @@ export function configure(aurelia) {
                 async: false
             }).done(function (content) {
                 window.localStorage.setItem(storageKey, JSON.stringify(content));
+                mappings = content;
             }).fail(function (jqXHR, textStatus, errorThrown) {
                 console.log(textStatus + ': ' + errorThrown);
             });
         }
-
+        
         if (mappings) {
             let idx = origin.moduleId.indexOf('aurelia-app');
 

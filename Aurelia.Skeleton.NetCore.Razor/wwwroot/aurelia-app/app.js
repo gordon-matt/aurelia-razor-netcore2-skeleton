@@ -1,6 +1,6 @@
-﻿import { HttpClient } from 'aurelia-http-client';
+﻿import 'jquery';
+import { HttpClient } from 'aurelia-http-client';
 import { PLATFORM } from 'aurelia-pal';
-import $ from 'jquery';
 
 export class App {
     async configureRouter(config, router) {

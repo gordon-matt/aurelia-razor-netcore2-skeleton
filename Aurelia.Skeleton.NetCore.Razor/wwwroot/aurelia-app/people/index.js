@@ -8,7 +8,6 @@ export class ViewModel {
     apiUrl = "/odata/PersonApi";
 
     constructor() {
-
         this.datasource = {
             type: 'odata-v4',
             transport: {
@@ -64,7 +63,7 @@ export class ViewModel {
     }
 
     async edit(id) {
-        let response = await this.http.get(this.apiUrl + "(" + id + ")");
+        let response = await this.http.get(`${this.apiUrl}(${id})`);
         let entity = response.content;
 
         this.id = entity.Id;
@@ -79,7 +78,7 @@ export class ViewModel {
 
     async remove(id) {
         if (confirm("Are you sure that you want to delete this record?")) {
-            let response = await this.http.delete(this.apiUrl + "(" + id + ")");
+            let response = await this.http.delete(`${this.apiUrl}(${id})`);
             
             this.grid.dataSource.read();
             this.grid.refresh();
@@ -106,7 +105,7 @@ export class ViewModel {
             let response = await this.http.post(this.apiUrl, record);
         }
         else {
-            let response = await this.http.put(this.apiUrl + "(" + this.id + ")", record);
+            let response = await this.http.put(`${this.apiUrl}(${this.id})`, record);
         }
 
         this.grid.dataSource.read();
