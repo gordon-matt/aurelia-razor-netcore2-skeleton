@@ -23,63 +23,23 @@ namespace Aurelia.Skeleton.NetCore.Razor.Infrastructure
                 var routes = new List<AureliaRoute>();
 
                 // HomeController
-                routes.Add(new AureliaRoute
-                {
-                    ModuleId = "/aurelia-app/index",
-                    Route = "",
-                    Name = "index",
-                    Title = "Home",
-                    Nav = true
-                });
-
-                routes.Add(new AureliaRoute
-                {
-                    ModuleId = "/aurelia-app/flickr",
-                    Route = "flickr",
-                    Name = "flickr",
-                    Title = "Flickr",
-                    Nav = true
-                });
+                routes.Add(new AureliaRoute { ModuleId = "/aurelia-app/index", Route = "", Name = "index", Title = "Home", Nav = true });
+                routes.Add(new AureliaRoute { ModuleId = "/aurelia-app/flickr", Route = "flickr", Name = "flickr", Title = "Flickr", Nav = true });
 
                 // ContactManagerController
-                routes.Add(new AureliaRoute
-                {
-                    ModuleId = "/aurelia-app/contact-manager/index",
-                    Route = "contact-manager/index",
-                    Name = "contact-manager/index",
-                    Title = "Contact Manager",
-                    Nav = true
-                });
+                routes.Add(new AureliaRoute { ModuleId = "/aurelia-app/contact-manager/index", Route = "contact-manager", Name = "contact-manager", Title = "Contact Manager", Nav = true });
 
                 // TodoListController
-                routes.Add(new AureliaRoute
-                {
-                    ModuleId = "/aurelia-app/todo-list/index",
-                    Route = "todo-list/index",
-                    Name = "todo-list/index",
-                    Title = "Todo List",
-                    Nav = true
-                });
-
-                // PersonController
-                routes.Add(new AureliaRoute
-                {
-                    ModuleId = "/aurelia-app/people/index",
-                    Route = "people",
-                    Name = "people/index",
-                    Title = "People",
-                    Nav = true
-                });
+                routes.Add(new AureliaRoute { ModuleId = "/aurelia-app/todo-list/index", Route = "todo-list", Name = "todo-list", Title = "Todo List", Nav = true });
 
                 // DynamicHtmlTestController
-                routes.Add(new AureliaRoute
-                {
-                    ModuleId = "/aurelia-app/dynamic-html-test/index",
-                    Route = "dynamic-html-test",
-                    Name = "dynamic-html-test/index",
-                    Title = "Dynamic HTML Test",
-                    Nav = true
-                });
+                routes.Add(new AureliaRoute { ModuleId = "/aurelia-app/dynamic-html-test/index", Route = "dynamic-html-test", Name = "dynamic-html-test", Title = "Dynamic HTML Demo", Nav = true });
+
+                // PersonController
+                routes.Add(new AureliaRoute { ModuleId = "/aurelia-app/people/index", Route = "people", Name = "people", Title = "KendoGrid CRUD Demo", Nav = true });
+
+                // TinyMceDemoController
+                routes.Add(new AureliaRoute { ModuleId = "/aurelia-app/tinymce-demo/index", Route = "tinymce-demo", Name = "tinymce-demo", Title = "TinyMCE Demo", Nav = true });
 
                 return routes;
             }
@@ -99,14 +59,17 @@ namespace Aurelia.Skeleton.NetCore.Razor.Infrastructure
             { "aurelia-app/contact-manager/list", "contact-manager/list" },
             { "aurelia-app/contact-manager/no-selection", "contact-manager/no-selection" },
 
+            // DynamicHtmlTestController
+            { "aurelia-app/dynamic-html-test/index", "dynamic-html-test" },
+
             // PersonController
             { "aurelia-app/people/index", "people" },
 
-            // TodoListController
-            { "aurelia-app/todo-list/index", "todo-list" },
+            // TinyMceDemoController
+            { "aurelia-app/tinymce-demo/index", "tinymce-demo" },
 
-            // DynamicHtmlTestController
-            { "aurelia-app/dynamic-html-test/index", "dynamic-html-test" }
+            // TodoListController
+            { "aurelia-app/todo-list/index", "todo-list" }
         };
     }
 }
