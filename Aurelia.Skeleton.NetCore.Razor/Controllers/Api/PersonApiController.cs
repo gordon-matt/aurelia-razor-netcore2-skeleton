@@ -1,6 +1,6 @@
 ﻿using Aurelia.Skeleton.NetCore.Razor.Data.Domain;
-using Framework.Controllers.OData;
-using Framework.Data;
+using Extenso.Data.Entity;
+using Extenso.Web.OData;
 
 namespace Aurelia.Skeleton.NetCore.Razor.Controllers.Api
 {

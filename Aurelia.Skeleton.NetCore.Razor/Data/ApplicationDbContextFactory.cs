@@ -1,4 +1,4 @@
-﻿using Framework.Data;
+﻿using Extenso.Data.Entity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 

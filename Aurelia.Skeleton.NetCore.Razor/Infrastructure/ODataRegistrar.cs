@@ -1,6 +1,6 @@
 ﻿using System;
 using Aurelia.Skeleton.NetCore.Razor.Data.Domain;
-using Framework.OData;
+using Extenso.AspNetCore.OData;
 using Microsoft.AspNet.OData.Builder;
 using Microsoft.AspNet.OData.Extensions;
 using Microsoft.AspNetCore.Routing;

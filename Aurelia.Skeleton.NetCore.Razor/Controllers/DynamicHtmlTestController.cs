@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 using Aurelia.Skeleton.NetCore.Razor.Models;
-using Framework.Rendering;
+using Extenso.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Aurelia.Skeleton.NetCore.Razor.Controllers
@@ -42,6 +42,7 @@ namespace Aurelia.Skeleton.NetCore.Razor.Controllers
                         };
                     }
                     break;
+
                 case SettingsType.MembershipSettings:
                     {
                         editorTemplatePath = "/Views/Shared/EditorTemplates/MembershipSettings.cshtml";
@@ -53,6 +54,7 @@ namespace Aurelia.Skeleton.NetCore.Razor.Controllers
                         };
                     }
                     break;
+
                 case SettingsType.SiteSettings:
                     {
                         editorTemplatePath = "/Views/Shared/EditorTemplates/SiteSettings.cshtml";

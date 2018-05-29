@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Aurelia.Skeleton.NetCore.Razor.Data.Domain;
-using Aurelia.Skeleton.NetCore.Razor.Services;
+using Extenso.Data.Entity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Aurelia.Skeleton.NetCore.Razor.Controllers
@@ -9,17 +9,17 @@ namespace Aurelia.Skeleton.NetCore.Razor.Controllers
     [Route("people")]
     public class PersonController : Controller
     {
-        private readonly IPersonService personService;
+        private readonly IRepository<Person> personRepository;
 
-        public PersonController(IPersonService personService)
+        public PersonController(IRepository<Person> personRepository)
         {
-            this.personService = personService;
+            this.personRepository = personRepository;
         }
 
         [Route("")]
         public IActionResult Index()
         {
-            if (personService.Count() == 0)
+            if (personRepository.Count() == 0)
             {
                 // Populate for testing purposes
 
@@ -29,7 +29,7 @@ namespace Aurelia.Skeleton.NetCore.Razor.Controllers
                 people.Add(new Person { FamilyName = "Johnson", GivenNames = "Dwayne", DateOfBirth = new DateTime(1972, 5, 2) });
                 people.Add(new Person { FamilyName = "Froning", GivenNames = "Rich", DateOfBirth = new DateTime(1987, 7, 21) });
 
-                personService.Insert(people);
+                personRepository.Insert(people);
             }
 
             return PartialView();
