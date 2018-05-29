@@ -1,6 +1,5 @@
 ﻿import 'jquery';
 import 'jquery-validation';
-import 'bootstrap';
 import { HttpClient } from 'aurelia-http-client';
 
 export class ViewModel {

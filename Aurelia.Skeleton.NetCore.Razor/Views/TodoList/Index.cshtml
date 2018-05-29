@@ -2,36 +2,40 @@
     <h1>${heading}</h1>
 
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-12">
             <form submit.trigger="addItem()">
-                <div class="form-group">
-                    <input type="text" class="form-control" value.bind="todoDescription" />
-                    <button type="submit" class="btn btn-primary">Add</button>
+                <div class="form-group row">
+                    <div class="col-9">
+                        <input type="text" class="form-control" value.bind="todoDescription" />
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fa fa-plus"></i>
+                    </button>
                 </div>
             </form>
         </div>
     </div>
 
     <div class="row">
-        <div class="col-md-6">
-            <table class="table">
-                <tbody>
-                    <tr repeat.for="item of items">
-                        <td>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" checked.bind="item.done" />
-                                    <span css="text-decoration: ${item.done ? 'line-through' : 'none'}">${item.description}</span>
-                                </label>
-                            </div>
-                        </td>
-                        <td>
-                            <button type="button" class="btn btn-danger btn-sm" click.trigger="removeItem(item)">Remove</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+        <table class="table">
+            <tbody>
+                <tr repeat.for="item of items">
+                    <td>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" checked.bind="item.done" />
+                                <span css="text-decoration: ${item.done ? 'line-through' : 'none'}">${item.description}</span>
+                            </label>
+                        </div>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-danger btn-sm" click.trigger="removeItem(item)">
+                            <i class="fa fa-remove"></i>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
 </template>

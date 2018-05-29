@@ -41,7 +41,7 @@ System.config({
     "aurelia-tinymce-wrapper": "npm:aurelia-tinymce-wrapper@1.2.2",
     "babel": "npm:babel-core@5.8.38",
     "babel-runtime": "npm:babel-runtime@5.8.38",
-    "bootstrap": "github:twbs/bootstrap@3.3.7",
+    "bootstrap": "npm:bootstrap@4.1.1",
     "bootstrap-notify": "npm:bootstrap-notify@3.1.3",
     "core-js": "npm:core-js@1.2.7",
     "font-awesome": "npm:font-awesome@4.7.0",
@@ -73,9 +73,6 @@ System.config({
     },
     "github:rstacruz/nprogress@0.2.0": {
       "css": "github:systemjs/plugin-css@0.1.37"
-    },
-    "github:twbs/bootstrap@3.3.7": {
-      "jquery": "npm:jquery@3.3.1"
     },
     "npm:assert@1.4.1": {
       "assert": "github:jspm/nodelibs-assert@0.1.0",
@@ -239,6 +236,10 @@ System.config({
     },
     "npm:babel-runtime@5.8.38": {
       "process": "github:jspm/nodelibs-process@0.1.2"
+    },
+    "npm:bootstrap@4.1.1": {
+      "jquery": "npm:jquery@3.3.1",
+      "tether": "github:HubSpot/tether@1.4.4"
     },
     "npm:buffer@5.1.0": {
       "base64-js": "npm:base64-js@1.3.0",
