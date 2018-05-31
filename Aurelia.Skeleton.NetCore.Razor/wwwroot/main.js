@@ -18,7 +18,7 @@ export function configure(aurelia) {
         .plugin(PLATFORM.moduleName("aurelia-dynamic-html"))
         .plugin(PLATFORM.moduleName('aurelia-tinymce-wrapper'))
         .globalResources([
-            '/aurelia-app/shared/loading-indicator'
+            PLATFORM.moduleName('./aurelia-app/shared/loading-indicator')
         ]);
 
     ViewLocator.prototype.convertOriginToViewUrl = function (origin) {

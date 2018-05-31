@@ -27,7 +27,7 @@ module.exports = (env, argv) => {
         },
         output: {
             path: path.resolve(bundleOutputDir),
-            publicPath: 'dist/',
+            publicPath: '/dist/',
             filename: "[name].js",
             //chunkFilename: "[name].js"
             //filename: 'vendor.js'
@@ -52,7 +52,16 @@ module.exports = (env, argv) => {
                 { test: /\.css$/i, exclude: [/node_modules/], issuer: /\.html$/i, use: cssLoader },
                 { test: /\.css$/i, exclude: [/node_modules/], issuer: [{ not: [{ test: /\.html$/i }] }], use: ["style-loader", cssLoader] },
 
-                { test: /\.js?$/, use: { loader: 'babel-loader', options: { presets: ['@babel/preset-env'] } } },
+                {
+                    test: /\.js?$/,
+                    use: {
+                        loader: 'babel-loader',
+                        options: {
+                            presets: ['@babel/preset-env'],
+                            plugins: ['transform-decorators']
+                        }
+                    }
+                },
 
                 // https://github.com/tinymce/tinymce/issues/2836
                 { test: require.resolve('tinymce/tinymce'), loader: 'imports-loader?this=>window' },
