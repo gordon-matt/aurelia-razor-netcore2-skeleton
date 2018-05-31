@@ -3,14 +3,13 @@
         <div class="message">Loading...</div>
         <i class="fa fa-spinner fa-spin"></i>
     </div>
+</div>
 
+@section scripts {
     <script src="https://kendo.cdn.telerik.com/2017.2.621/js/jquery.min.js"></script>
     <script src="https://kendo.cdn.telerik.com/2017.2.621/js/jszip.min.js"></script>
     <script src="https://kendo.cdn.telerik.com/2017.2.621/js/kendo.all.min.js"></script>
 
-    <script src="jspm_packages/system.js"></script>
-    <script src="config.js"></script>
-    <script>
-        SystemJS.import('aurelia-bootstrapper');
-    </script>
-</div>
+    <script type="text/javascript" src="~/dist/vendor.js" asp-append-version="true"></script>
+    <script type="text/javascript" src="~/dist/app.js" asp-append-version="true"></script>
+}

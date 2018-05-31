@@ -3,6 +3,14 @@ import { ConsoleAppender } from "aurelia-logging-console";
 import 'jquery';
 import 'bootstrap';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'font-awesome/css/bootstrap.min.css';
+import '/css/site.min.css';
+import '/kendo-sdk/styles/kendo.common.min.css';
+import '/kendo-sdk/styles/kendo.bootstrap.min.css';
+import 'tinymce/skins/lightgray/skin.min.css';
+import 'tinymce/skins/lightgray/content.min.css';
+
 LogManager.addAppender(new ConsoleAppender());
 LogManager.setLevel(LogManager.logLevel.debug);
 
