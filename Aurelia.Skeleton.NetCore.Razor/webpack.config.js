@@ -52,7 +52,11 @@ module.exports = (env, argv) => {
                 { test: /\.css$/i, exclude: [/node_modules/], issuer: /\.html$/i, use: cssLoader },
                 { test: /\.css$/i, exclude: [/node_modules/], issuer: [{ not: [{ test: /\.html$/i }] }], use: ["style-loader", cssLoader] },
 
-                { test: /\.js?$/, use: { loader: 'babel-loader', options: { presets: ['@babel/preset-env'] } } }
+                { test: /\.js?$/, use: { loader: 'babel-loader', options: { presets: ['@babel/preset-env'] } } },
+
+                // https://github.com/tinymce/tinymce/issues/2836
+                { test: require.resolve('tinymce/tinymce'), loader: 'imports-loader?this=>window' },
+                { test: /tinymce\/(themes|plugins)\//, loader: ['imports-loader?this=>window'] }
             ]
         },
         //devtool: isDevBuild ? "source-map" : false,

@@ -4,12 +4,8 @@ import 'jquery';
 import 'bootstrap';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'font-awesome/css/bootstrap.min.css';
-import '/css/site.min.css';
-import '/kendo-sdk/styles/kendo.common.min.css';
-import '/kendo-sdk/styles/kendo.bootstrap.min.css';
-import 'tinymce/skins/lightgray/skin.min.css';
-import 'tinymce/skins/lightgray/content.min.css';
+import 'font-awesome/css/font-awesome.min.css';
+import './css/site.min.css';
 
 LogManager.addAppender(new ConsoleAppender());
 LogManager.setLevel(LogManager.logLevel.debug);
@@ -22,7 +18,7 @@ export function configure(aurelia) {
         .plugin(PLATFORM.moduleName("aurelia-dynamic-html"))
         .plugin(PLATFORM.moduleName('aurelia-tinymce-wrapper'))
         .globalResources([
-            PLATFORM.moduleName('/aurelia-app/shared/loading-indicator')
+            '/aurelia-app/shared/loading-indicator'
         ]);
 
     ViewLocator.prototype.convertOriginToViewUrl = function (origin) {
