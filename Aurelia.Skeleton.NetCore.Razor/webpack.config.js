@@ -54,11 +54,19 @@ module.exports = (env, argv) => {
 
                 {
                     test: /\.js?$/,
+                    exclude: /(node_modules|bower_components)/,
                     use: {
                         loader: 'babel-loader',
                         options: {
-                            presets: ['@babel/preset-env'],
-                            plugins: ['transform-decorators']
+                            presets: [
+                                ["@babel/preset-env"],
+                                ["@babel/preset-stage-2", { decoratorsLegacy: true }]
+                            ],
+                            plugins: [
+                                "@babel/plugin-transform-runtime",
+                                ["@babel/plugin-proposal-decorators", { legacy: true }],
+                                ["@babel/plugin-proposal-class-properties", { loose: true }]
+                            ]
                         }
                     }
                 },
