@@ -16,7 +16,9 @@
             </button>
         </div>
 
+        @* Strangely, neither the clearfix class nor style="clear:both" work here... TODO: Investigate why and fix... *@
         <div class="clearfix"></div>
+        @*<div style="clear:both"></div>*@
         <br />
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 @rtlClass">
             <ak-grid id="grid"
@@ -29,14 +31,14 @@
                 <ak-col k-field="FamilyName" k-title="Family Name"></ak-col>
                 <ak-col k-field="GivenNames" k-title="Given Name/s"></ak-col>
                 <ak-col k-field="DateOfBirth" k-title="Date of Birth" k-type="date" k-filterable.bind="false" k-width.bind="200" k-format="{0:yyyy-MM-dd}"></ak-col>
-                <ak-col k-field="Id" k-title="&nbsp;" k-filterable.bind="false" k-width.bind="150" k-attributes.bind="{ class: 'text-center' }">
+                <ak-col k-field="Id" k-title="&nbsp;" k-filterable.bind="false" k-width.bind="100" k-attributes.bind="{ class: 'text-center' }">
                     <ak-template>
                         <div class="btn-group">
-                            <a click.delegate="edit($this.Id)" class="btn btn-default btn-xs">
-                                <i class="fa fa-edit"></i> Edit
+                            <a click.delegate="edit($this.Id)" class="btn btn-secondary btn-sm text-white">
+                                <i class="fa fa-edit"></i>
                             </a>
-                            <a click.delegate="remove($this.Id)" class="btn btn-danger btn-xs">
-                                <i class="fa fa-trash"></i> Delete
+                            <a click.delegate="remove($this.Id)" class="btn btn-danger btn-sm text-white">
+                                <i class="fa fa-remove"></i>
                             </a>
                         </div>
                     </ak-template>
@@ -47,16 +49,16 @@
 
     <div id="form-section" class="row" style="display:none">
         <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <div class="panel panel-primary">
-                <div class="panel-heading">Details</div>
-                <div class="panel-body">
+            <div class="card">
+                <div class="card-header text-white bg-dark">Details</div>
+                <div class="card-body">
                     <form id="form-section-form" role="form" class="form-horizontal">
                         <fieldset>
                             <legend id="form-section-legend"></legend>
                             <div class="row">
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                    <div class="form-group">
-                                        @Html.Label("FamilyName", "Family Name", new { @class = "control-label col-xs-12 col-sm-4 col-md-3 col-lg-3" })
+                                    <div class="form-group row">
+                                        @Html.Label("FamilyName", "Family Name", new { @class = "col-xs-12 col-sm-4 col-md-3 col-lg-3 col-form-label" })
                                         <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
                                             <input name="FamilyName" type="text" class="form-control" value.bind="familyName" />
                                         </div>
@@ -65,8 +67,8 @@
                             </div>
                             <div class="row">
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                    <div class="form-group">
-                                        @Html.Label("GivenNames", "Given Name/s", new { @class = "control-label col-xs-12 col-sm-4 col-md-3 col-lg-3" })
+                                    <div class="form-group row">
+                                        @Html.Label("GivenNames", "Given Name/s", new { @class = "col-xs-12 col-sm-4 col-md-3 col-lg-3 col-form-label" })
                                         <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
                                             <input name="GivenNames" type="text" class="form-control" value.bind="givenNames" />
                                         </div>
@@ -75,8 +77,8 @@
                             </div>
                             <div class="row">
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                    <div class="form-group">
-                                        @Html.Label("DateOfBirth", "Date of Birth", new { @class = "control-label col-xs-12 col-sm-4 col-md-3 col-lg-3" })
+                                    <div class="form-group row">
+                                        @Html.Label("DateOfBirth", "Date of Birth", new { @class = "col-xs-12 col-sm-4 col-md-3 col-lg-3 col-form-label" })
                                         <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
                                             <input name="DateOfBirth" type="text" class="form-control" ak-datepicker="k-value.two-way: dateOfBirth; k-format.bind:'yyyy-MM-dd'" />
                                         </div>
@@ -85,7 +87,7 @@
                             </div>
                             <div class="form-group pull-right">
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                    <button type="button" class="btn btn-default" click.delegate="cancel()">Cancel</button>
+                                    <button type="button" class="btn btn-secondary" click.delegate="cancel()">Cancel</button>
                                     <button type="button" class="btn btn-primary" click.delegate="save()"><i class="fa fa-save"></i> Save</button>
                                 </div>
                             </div>

@@ -4,37 +4,42 @@
     @*<require from="aurelia-dynamic-html/aurelia-dynamic-html"></require>*@
 
     <div class="row">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title">Panel title</h3>
-            </div>
-            <div class="panel-body">
-                <form>
-                    <div class="form-group">
-                        <label for="SettingsType">Settings Type</label>
-                        @Html.DropDownList(
-                            "SettingsType",
-                            Html.GetEnumSelectList<SettingsType>(),
-                            new Dictionary<string, object>
-                            {
-                                { "class", "form-control" },
-                                { "value.bind", "settingsType" }
-                            })
-                    </div>
-                    <div class="form-group">
-                        <button type="button" click.delegate="getSettingsUI()" class="btn btn-primary">Get Settings</button>
-                    </div>
-                </form>
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-header text-white bg-dark">
+                    Settings
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="SettingsType">Settings Type</label>
+                            @Html.DropDownList(
+                                "SettingsType",
+                                Html.GetEnumSelectList<SettingsType>(),
+                                new Dictionary<string, object>
+                                {
+                                    { "class", "form-control" },
+                                    { "value.bind", "settingsType" }
+                                })
+                        </div>
+                        <div class="form-group">
+                            <button type="button" click.delegate="getSettingsUI()" class="btn btn-primary">Get Settings</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
+    <br />
     <div class="row">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title">Dynamic HTML</h3>
-            </div>
-            <div class="panel-body">
-                <dynamic-html html.bind="dynamicHtml" context.bind="dynamicModel" compiled.delegate="handleCompiled($event)"></dynamic-html>
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-header text-white bg-dark">
+                    Dynamic HTML
+                </div>
+                <div class="card-body">
+                    <dynamic-html html.bind="dynamicHtml" context.bind="dynamicModel" compiled.delegate="handleCompiled($event)"></dynamic-html>
+                </div>
             </div>
         </div>
     </div>

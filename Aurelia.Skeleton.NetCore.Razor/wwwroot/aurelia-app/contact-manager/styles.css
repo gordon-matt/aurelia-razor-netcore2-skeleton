@@ -18,28 +18,11 @@ a:focus {
     margin: 20px;
 }
 
-.contact-list {
+/*.contact-list {
     overflow-y: auto;
     border: 1px solid #ddd;
     padding: 10px;
 }
-
-.panel {
-    margin: 20px;
-}
-
-.button-bar {
-    right: 0;
-    left: 0;
-    bottom: 0;
-    border-top: 1px solid #ddd;
-    background: white;
-}
-
-    .button-bar > button {
-        float: right;
-        margin: 20px;
-    }
 
 li.list-group-item {
     list-style: none;
@@ -51,4 +34,8 @@ li.list-group-item {
 
     li.list-group-item.active > a {
         color: white;
-    }
+    }*/
+
+/*li.list-group-item.active {
+    background-color: #f8f9fa !important;
+}*/

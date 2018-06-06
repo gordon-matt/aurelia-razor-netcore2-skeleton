@@ -2,7 +2,7 @@
 import 'jquery-validation';
 import 'bootstrap-notify';
 import { HttpClient } from 'aurelia-http-client';
-import { SectionSwitcher } from '/aurelia-app/shared/section-switching';
+import { SectionSwitcher } from '../shared/section-switching';
 
 export class ViewModel {
     apiUrl = "/odata/PersonApi";

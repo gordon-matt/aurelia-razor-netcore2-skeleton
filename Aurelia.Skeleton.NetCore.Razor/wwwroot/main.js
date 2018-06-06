@@ -1,6 +1,7 @@
 ﻿import { LogManager, PLATFORM, ViewLocator } from "aurelia-framework";
 import { ConsoleAppender } from "aurelia-logging-console";
-import $ from 'jquery';
+import 'jquery';
+import 'bootstrap';
 
 LogManager.addAppender(new ConsoleAppender());
 LogManager.setLevel(LogManager.logLevel.debug);
