@@ -277,12 +277,7 @@ System.config({
     }
   },
   bundles: {
-    "dist/vendor-build.js": [
-      "github:jspm/nodelibs-process@0.1.2.js",
-      "github:jspm/nodelibs-process@0.1.2/index.js",
-      "github:rstacruz/nprogress@0.2.0.js",
-      "github:rstacruz/nprogress@0.2.0/nprogress.css!github:systemjs/plugin-css@0.1.37.js",
-      "github:rstacruz/nprogress@0.2.0/nprogress.js",
+    "dist/aurelia-build.js": [
       "npm:aurelia-binding@1.7.1.js",
       "npm:aurelia-binding@1.7.1/aurelia-binding.js",
       "npm:aurelia-bootstrapper@2.2.0.js",
@@ -369,17 +364,7 @@ System.config({
       "npm:aurelia-templating-router@1.3.1/route-loader.js",
       "npm:aurelia-templating-router@1.3.1/router-view.js",
       "npm:aurelia-templating@1.7.0.js",
-      "npm:aurelia-templating@1.7.0/aurelia-templating.js",
-      "npm:aurelia-tinymce-wrapper@1.2.2.js",
-      "npm:aurelia-tinymce-wrapper@1.2.2/index.js",
-      "npm:aurelia-tinymce-wrapper@1.2.2/tiny-mce.js",
-      "npm:aurelia-tinymce-wrapper@1.2.2/utilities/guid.js",
-      "npm:process@0.11.10.js",
-      "npm:process@0.11.10/browser.js",
-      "npm:timers@0.1.1.js",
-      "npm:timers@0.1.1/index.js",
-      "npm:tinymce@4.7.12.js",
-      "npm:tinymce@4.7.12/tinymce.js"
+      "npm:aurelia-templating@1.7.0/aurelia-templating.js"
     ]
   }
 });

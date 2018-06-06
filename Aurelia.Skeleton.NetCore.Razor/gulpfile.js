@@ -20,7 +20,7 @@ var config = {
         //        minify: true
         //    }
         //},
-        "dist/vendor-build": {
+        "dist/aurelia-build": {
             includes: [
                 'aurelia-binding',
                 'aurelia-bootstrapper',
@@ -43,18 +43,25 @@ var config = {
                 'aurelia-task-queue',
                 'aurelia-templating',
                 'aurelia-templating-resources',
-                'aurelia-templating-router',
-                'aurelia-tinymce-wrapper',
-                'nprogress',
-                //'text',
-                'tinymce',//,
+                'aurelia-templating-router'
+                //'nprogress',
                 //'bootstrap/css/bootstrap.css!text'
             ],
             options: {
                 inject: true,
                 minify: true
             }
-        }
+        }//,
+        //"dist/tinymce-build": {
+        //    includes: [
+        //        'tinymce',
+        //        'aurelia-tinymce-wrapper'
+        //    ],
+        //    options: {
+        //        inject: true,
+        //        minify: true
+        //    }
+        //},
     }
 };
 
