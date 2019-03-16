@@ -16,8 +16,6 @@ System.config({
   },
   bundles: {
     "dist/aurelia-build.js": [
-      "npm:aurelia-binding@2.1.1.js",
-      "npm:aurelia-binding@2.1.1/aurelia-binding.js",
       "npm:aurelia-binding@2.2.0.js",
       "npm:aurelia-binding@2.2.0/aurelia-binding.js",
       "npm:aurelia-bootstrapper@2.3.2.js",
@@ -107,6 +105,7 @@ System.config({
       "npm:aurelia-templating@1.10.1/aurelia-templating.js"
     ]
   },
+
   map: {
     "aurelia-binding": "npm:aurelia-binding@2.2.0",
     "aurelia-bootstrapper": "npm:aurelia-bootstrapper@2.3.2",
@@ -174,18 +173,6 @@ System.config({
       "buffer": "github:jspm/nodelibs-buffer@0.1.1",
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
-    "npm:aurelia-binding@1.7.3": {
-      "aurelia-logging": "npm:aurelia-logging@1.5.1",
-      "aurelia-metadata": "npm:aurelia-metadata@1.0.5",
-      "aurelia-pal": "npm:aurelia-pal@1.8.1",
-      "aurelia-task-queue": "npm:aurelia-task-queue@1.3.2"
-    },
-    "npm:aurelia-binding@2.1.1": {
-      "aurelia-logging": "npm:aurelia-logging@1.5.1",
-      "aurelia-metadata": "npm:aurelia-metadata@1.0.5",
-      "aurelia-pal": "npm:aurelia-pal@1.8.1",
-      "aurelia-task-queue": "npm:aurelia-task-queue@1.3.2"
-    },
     "npm:aurelia-binding@2.2.0": {
       "aurelia-logging": "npm:aurelia-logging@1.5.1",
       "aurelia-metadata": "npm:aurelia-metadata@1.0.5",
@@ -213,7 +200,7 @@ System.config({
       "aurelia-pal": "npm:aurelia-pal@1.8.1"
     },
     "npm:aurelia-dynamic-html@0.3.1": {
-      "aurelia-binding": "npm:aurelia-binding@1.7.3",
+      "aurelia-binding": "npm:aurelia-binding@2.2.0",
       "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.4.2",
       "aurelia-logging": "npm:aurelia-logging@1.5.1",
       "aurelia-pal": "npm:aurelia-pal@1.8.1",
@@ -243,7 +230,7 @@ System.config({
       "aurelia-path": "npm:aurelia-path@1.1.2"
     },
     "npm:aurelia-kendoui-bridge@1.8.0": {
-      "aurelia-binding": "npm:aurelia-binding@2.1.1",
+      "aurelia-binding": "npm:aurelia-binding@2.2.0",
       "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.4.2",
       "aurelia-logging": "npm:aurelia-logging@1.5.1",
       "aurelia-metadata": "npm:aurelia-metadata@1.0.5",
@@ -325,7 +312,7 @@ System.config({
       "aurelia-task-queue": "npm:aurelia-task-queue@1.3.2"
     },
     "npm:aurelia-tinymce-wrapper@1.2.3": {
-      "aurelia-binding": "npm:aurelia-binding@1.7.3",
+      "aurelia-binding": "npm:aurelia-binding@2.2.0",
       "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.4.2",
       "aurelia-event-aggregator": "npm:aurelia-event-aggregator@1.0.2",
       "aurelia-framework": "npm:aurelia-framework@1.3.1",
