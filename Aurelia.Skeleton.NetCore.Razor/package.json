@@ -35,7 +35,7 @@
       "jquery-validation-unobtrusive": "npm:jquery-validation-unobtrusive@^3.2.11",
       "nprogress": "npm:nprogress@^0.2.0",
       "text": "github:systemjs/plugin-text@^0.0.11",
-      "tinymce": "npm:tinymce@^5.0.2"
+      "tinymce": "npm:tinymce@^5.0.3"
     },
     "devDependencies": {
       "babel": "npm:babel-core@^5.8.24",

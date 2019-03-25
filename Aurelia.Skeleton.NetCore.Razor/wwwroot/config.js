@@ -141,7 +141,7 @@ System.config({
     "jquery-validation-unobtrusive": "npm:jquery-validation-unobtrusive@3.2.11",
     "nprogress": "npm:nprogress@0.2.0",
     "text": "github:systemjs/plugin-text@0.0.11",
-    "tinymce": "npm:tinymce@5.0.2",
+    "tinymce": "npm:tinymce@5.0.3",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.4.1"
     },
@@ -325,7 +325,7 @@ System.config({
       "aurelia-templating": "npm:aurelia-templating@1.10.1",
       "aurelia-templating-binding": "npm:aurelia-templating-binding@1.5.2",
       "timers": "npm:timers@0.1.1",
-      "tinymce": "npm:tinymce@4.9.3"
+      "tinymce": "npm:tinymce@5.0.3"
     },
     "npm:babel-runtime@5.8.38": {
       "process": "github:jspm/nodelibs-process@0.1.2"
@@ -395,10 +395,7 @@ System.config({
     "npm:source-map@0.6.1": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
-    "npm:tinymce@4.9.3": {
-      "process": "github:jspm/nodelibs-process@0.1.2"
-    },
-    "npm:tinymce@5.0.2": {
+    "npm:tinymce@5.0.3": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:urix@0.1.0": {

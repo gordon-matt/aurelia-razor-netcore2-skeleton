@@ -1,5 +1,5 @@
 ﻿import 'jquery';
-import 'tinymce/themes/modern/theme';
+import 'tinymce/themes/silver/theme';
 
 import 'tinymce/plugins/advlist/plugin';
 import 'tinymce/plugins/anchor/plugin';
@@ -35,7 +35,7 @@ export class ViewModel {
         this.content = 'Hello World!';
 
         this.options = {
-            theme: "modern",
+            theme: "silver",
             plugins: [
                 "advlist autolink lists link image charmap print preview hr anchor pagebreak",
                 "searchreplace wordcount visualblocks visualchars code fullscreen",

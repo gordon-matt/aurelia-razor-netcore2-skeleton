@@ -12,10 +12,10 @@ export function configure(aurelia) {
         .developmentLogging()
         .plugin(PLATFORM.moduleName('aurelia-kendoui-bridge'))
         .plugin(PLATFORM.moduleName("aurelia-dynamic-html"))
-        .plugin(PLATFORM.moduleName('aurelia-tinymce-wrapper'))
-        .globalResources([
-            PLATFORM.moduleName('/aurelia-app/shared/loading-indicator')
-        ]);
+        .plugin(PLATFORM.moduleName('aurelia-tinymce-wrapper'));
+        //.globalResources([
+        //    PLATFORM.moduleName('/aurelia-app/shared/loading-indicator')
+        //]);
 
     ViewLocator.prototype.convertOriginToViewUrl = function (origin) {
         let viewUrl = null;
